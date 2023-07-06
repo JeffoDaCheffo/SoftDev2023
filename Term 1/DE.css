@@ -1,0 +1,31 @@
+div {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-area: '1 2 3 4 5 6 7 8 9 10';
+}
+
+#day1 {
+  grid-column: 1;
+}
+
+.period {
+  border: 1px solid black;
+  width: 8vw;
+  height: 9vh;
+}
+
+.day {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 9vw;
+  height: 60vh;
+}

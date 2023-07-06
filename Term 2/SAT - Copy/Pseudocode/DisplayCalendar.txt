@@ -1,0 +1,27 @@
+BEGIN
+  INPUT selectedView
+  READ most recent Monday.dayOfCycle from cycle file
+  IF selectedView = "Day" THEN
+      startDate <- currentDate
+      endDate <- currentDate
+  ELSE IF selectedView = "Week" THEN
+      startDate <- most recent Monday
+      endDate <- currentDate + 4 days
+  ELSE
+      startDate <- most recent Monday
+      endDate <- startDate + 9 days
+  END IF
+  days <- days in range(startDate, endDate)
+  subjects <- READ subjects in days from student time table file
+
+  FOR i FROM 0 TO days.length - 1
+    DISPLAY day.details               # date and day of cycle
+    FOR i FROM 0 TO subjects.length - 1
+      DISPLAY subject.name and subject.details   #classroom and time
+    NEXT i
+  NEXT i
+
+  IF selectedView != "Day" THEN
+    highlight current day
+  END IF
+END

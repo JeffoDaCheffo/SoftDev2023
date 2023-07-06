@@ -1,0 +1,16 @@
+{Login}
+BEGIN
+    INPUT username, password
+    loggedIn <- false
+
+    READ users file
+    WHILE (user)
+        IF (username = user.username AND hashed(password) = user.password) THEN
+            loggedIn <- true 
+        ENDIF
+    END WHILE
+
+    IF loggedIn = false THEN
+        OUTPUT "Username or Password is Incorrect"
+    ENDIF
+END

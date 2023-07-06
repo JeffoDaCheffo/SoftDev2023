@@ -1,0 +1,8 @@
+{editHomework}
+BEGIN
+  INPUT subjects, tasks, dueDates, priorities
+
+  FOREACH subject IN subjects
+    WRITE currentDate, subjects[i], tasks[i], dueDates[i] and priorities[i] to homework file
+  ENDFOR
+END

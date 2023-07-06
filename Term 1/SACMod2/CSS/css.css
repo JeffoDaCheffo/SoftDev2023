@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #4d70c1;
+}
+
+#Pg1{
+    width: 25vw;
+    height: fit-content;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 14vw 11vw;
+    grid-template-rows: 0.5fr 2.5fr 2fr 1fr;
+    grid-template-areas: 'SalesP SalesP'
+        'Rooms Quality'
+        'Rooms Discount'
+        'submit submit';
+    grid-gap: 20px;
+    grid-auto-columns: 50%;
+    padding: 30px;
+}
+
+#QuotationDetails {
+    width: 25vw;
+    height: fit-content;
+    padding: 20px;
+}
+
+
+#SalesP {
+    grid-area: SalesP;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#SalesP input {
+    margin-left: 10px;
+}
+
+
+#Rooms {
+    grid-area: Rooms;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    table-layout: fixed;
+}
+
+td input {
+    max-width: 90%;
+    border: none;
+    background-color: inherit;
+}
+
+#Discount input {
+    max-width: 50%;
+}
+
+table,
+th,
+tr,
+td {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.RoomNum {
+    width: 3vw;
+}
+
+th {
+    font-size: 1vw;
+}
+
+
+.Right {
+    margin-left: 10px;
+}
+
+#Quality {
+    grid-area: Quality;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#Discount {
+    grid-area: Discount;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    grid-area: submit;
+    height: 100%;
+    width: 100%;
+    background-color: #4d70c1;
+    border: none;
+    border-radius: 5px;
+}
+
+#NewQuote{
+    height: 4vh;
+}

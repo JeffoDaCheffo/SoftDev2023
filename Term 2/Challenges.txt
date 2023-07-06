@@ -1,0 +1,101 @@
+#2a: Find a number in an array of numbers
+
+  BEGIN
+
+    arrNumbers <-INPUT
+    x <- INPUT
+    n <- length(arrNumbers)
+    found <- FALSE
+
+    FOR i <- 0 TO n-1
+      IF arrNumbers[i] = x THEN
+        OUTPUT your number is in position " +i
+        found <- TRUE
+        EXIT FOR
+      END IF
+    NEXT i
+
+    IF found = FALSE THEN
+      OUTPUT "not in list"
+    END IF
+
+  END
+
+#2b: Find largest in non-sorted array
+
+  BEGIN
+
+    Arr <- ArrNumber
+    n <- length(arrNumbers)-1
+    largest <- 0 
+
+    FOR i <- 0 TO n
+      IF Arr[i] > largest THEN 
+        largest <- Arr[i]
+      END IF
+    NEXT i
+
+    OUTPUT largest
+
+  END
+
+
+#3: Median of sorted array
+
+  BEGIN
+    arrNumbers <- sortedArray
+    mid <- length(arrNumbers)/2 
+    IF mid MOD 2 != 0 THEN
+    //odd
+      median <- arrNumbers[mid-1]
+    ELSE 
+    //even
+
+      high <- arrNumbers[length(arrNumbers)/2]
+      low <- arrNumbers[length(arrNumbers)/2 -1]
+
+      median <- (high + low)/2  
+    END IF
+
+    OUTPUT median
+
+  END
+
+#1 ish: 
+
+BEGIN
+  numbers <- array()
+  INPUT number
+  WHILE
+    number != 0
+  DO
+    push number into numbers()
+    INPUT number
+  END DO
+
+  count = length(numbers())
+  sum = 0
+
+  FOR i FROM 0 TO count -1
+    count <- count plus numbers[i]
+  END FOR
+
+  highest <- 0
+  FOR i FROM 0 TO count -1
+    IF numbers[i] > highest
+      highest <- numbers[i]
+    END IF
+  END FOR
+
+  lowest <- 0
+  FOR i FROM 0 TO count -1
+    IF numbers[i] < lowest
+      lowest <- numbers[i]
+    END IF
+  END FOR
+
+  RETURN count
+  RETURN sum
+  RETURN highest
+  RETURN lowest
+  

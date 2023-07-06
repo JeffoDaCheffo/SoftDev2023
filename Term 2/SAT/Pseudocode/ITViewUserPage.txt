@@ -1,0 +1,15 @@
+{IT User Selection}
+BEGIN
+  INPUT userID
+
+  IF (file for UserID) THEN
+    READ user file for UserID
+    DISPLAY user.fname, user.lName and userID
+  END IF
+
+  INPUT confirmationClick
+  
+  IF (confirmationClick) THEN
+    login as selected user
+  ENDIF
+END

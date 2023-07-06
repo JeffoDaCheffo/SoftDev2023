@@ -1,0 +1,6 @@
+{Personalisation}
+BEGIN
+  INPUT subject, selectedColour
+
+  subject.colour <- selectedColour
+END

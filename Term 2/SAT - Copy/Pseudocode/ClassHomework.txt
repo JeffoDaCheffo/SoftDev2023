@@ -1,0 +1,9 @@
+{Class Homework}
+BEGIN
+  INPUT date, subject, group, tasks and dueDate
+
+  READ students from group file
+  WHILE (student)
+    WRITE date, task and dueDate to student's group homework file
+  ENDWHILE
+END

@@ -1,0 +1,70 @@
+#wrap {
+  border: 1px solid black;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas: 'top' 'classes';
+}
+
+#top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 'DOW day date gap buttons';
+  grid-area: top;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#DOW {
+  grid-area: DOW;
+}
+
+#day {
+  grid-area: day;
+}
+
+#date {
+  grid-area: date;
+}
+
+#gap {
+  grid-area: gap;
+}
+
+#buttons {
+  grid-area: buttons;
+}
+
+#classes {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-area: classes;
+}
+
+.period {
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.subject {
+  width: 15%;
+  height: 9vh;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input {
+  margin: 5px;
+  border: 1px solid black;
+  width: 85%;
+  height: 30%;
+  border-radius: 5px;
+}

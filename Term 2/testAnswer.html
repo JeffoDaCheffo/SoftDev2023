@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folio 6</title>
+
+    <link rel="stylesheet" href="folio6.css">
+    <link rel="stylesheet" href="../general.css">
+</head>
+
+<body>
+    <div class="Heading">
+        <header>
+            <h1>Cool Stats</h1>
+        </header>
+
+        <div class="navigation">
+            <nav>
+                <a href="../HomePage/index.html">Home</a>
+                <a href="../Folio1/folio1.html">Folio 1</a>
+                <a href="../Folio2/folio2.html">Folio 2</a>
+                <a href="../Folio3/folio3.html">Folio 3</a>
+                <a href="../Folio4/folio4.html">Folio 4</a>
+                <a href="../Folio5/folio5.html">Folio 5</a>
+                <a href="../Folio6/folio6.html">Folio 6</a>
+                <a href="../Folio7/folio7.html">Folio 7</a>
+            </nav>
+        </div>
+
+        <div class="container">
+            <button id="run">Click me</button>
+            <table>
+                <tr>
+                    <th>
+                        Statistics
+                    </th>
+                    <th>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Number of Entries
+                    </th>
+                    <th>
+                        <p id="Count"></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Minimum
+                    </th>
+                    <th>
+                        <p id="Min"></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Maximum
+                    </th>
+                    <th>
+                        <p id="Max"></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Range
+                    </th>
+                    <th>
+                        <p id="Range"></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Sum
+                    </th>
+                    <th>
+                        <p id="Sum"></p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Average
+                    </th>
+                    <th>
+                        <p id="Average"></p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            document.getElementById('run').addEventListener('click', stats);
+
+            function stats() {
+                let output_Count = document.getElementById('Count');
+                let output_Max = document.getElementById('Max');
+                let output_Min = document.getElementById('Min');
+                let output_Range = document.getElementById('Range');
+                let output_Sum = document.getElementById('Sum');
+                let output_Average = document.getElementById('Average');
+                let output_field = document.getElementById('output');
+
+                let input = prompt("Enter a Number");
+                let count = 0;
+                let min = 0;
+                let max = 0;
+                let range = 0;
+                let sum = 0;
+                let average = 0;
+
+                const numberLog = [];
+                while (input != "") {
+                    count++;
+                    numberLog.push(parseInt(input));
+
+                    input = prompt("Enter an Number");
+
+                    min = Math.min(...numberLog);
+                    max = Math.max(...numberLog);
+                    range = max - min;
+                }
+
+                for (i = 0; i < numberLog.length; i++) {
+                    sum = sum + numberLog[i];
+                }
+
+                console.log(sum);
+                output_Count.innerHTML = count;
+                output_Max.innerHTML = max;
+                output_Min.innerHTML = min;
+                output_Range.innerHTML = range;
+                output_Sum.innerHTML = sum;
+                output_Average.innerHTML = Math.round(sum / count);
+            }
+            function sumOfArray(numberLog) {
+            }
+        </script>
+</body>
+</html>

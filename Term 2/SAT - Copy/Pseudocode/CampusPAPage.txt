@@ -1,0 +1,10 @@
+{campus PA Entering Key Events}
+BEGIN
+
+  INPUT cohort, date and information         # cohort is selected by year levels
+  
+  READ students from cohort file
+  WHILE (students)
+    WRITE date and information to student's key events file.
+  END WHILE
+END

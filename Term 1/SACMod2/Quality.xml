@@ -1,0 +1,14 @@
+<XML>
+  <Quality>
+    <Name>Standard</Name>
+    <Price>120</Price>
+  </Quality>
+  <Quality>
+    <Name>Premium</Name>
+    <Price>180</Price>
+  </Quality>
+  <Quality>
+    <Name>Executive</Name>
+    <Price>210</Price>
+  </Quality>
+</XML>
